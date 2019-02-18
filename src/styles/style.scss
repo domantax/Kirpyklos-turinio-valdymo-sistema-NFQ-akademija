@@ -1,0 +1,10 @@
+@import 'base/mixins';
+@import 'components/calendar';
+@import 'components/reservationTimes';
+@import 'components/reservationDetailsPopup';
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 3px solid black;
+}

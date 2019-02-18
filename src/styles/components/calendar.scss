@@ -1,0 +1,38 @@
+.calendar {
+  width: 80%;
+  margin: 0 auto;
+
+  &__cell {
+    width: (100%/7);
+
+    font-size: 30px;
+    @include aspect-ratio(1.2, 1);
+
+    &--future {
+      background: red;
+      &:hover {
+        background: green;
+      }
+    }
+    &--today {
+      background: blue;
+      &:hover {
+        background: green;
+      }
+    }
+    &--previous {
+      background: gray;
+    }
+
+    &__content-span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+}
+
+.active {
+  background: pink;
+}

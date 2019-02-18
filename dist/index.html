@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <div class="container">
+      <button class="next">Next</button>
+      <h2 class="month"></h2>
+      <table class="calendar"></table>
+      <section class="reservation-times">
+        <h2>Rezervacijų laikai:</h2>
+        <div class="reservation-times__container"></div>
+      </section>
+    </div>
+    <div class="reservation-details-popup__container hidden">
+      <div class="reservation-details-popup">
+        <form class="reservation-details-popup__form">
+          <h3 class="reservation-details-popup__time"></h3>
+          <div class="reservation-details-popup__form__group">
+            <label for="name">Vardas:</label>
+            <input type="text" placeholder="Vardenis" />
+          </div>
+          <div class="reservation-details-popup__form__group">
+            <label for="name">Pavardė:</label>
+            <input type="text" placeholder="Pavardė" />
+          </div>
+          <div class="reservation-details-popup__form__group">
+            <label for="name">Email:</label>
+            <input type="email" placeholder="El. paštas" />
+          </div>
+          <div class="reservation-details-popup__form__group">
+            <label for="name">Telefonas:</label>
+            <input type="text" placeholder="861234567" />
+          </div>
+          <input
+            class="reservation-submit"
+            type="submit"
+            value="Registruotis"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
