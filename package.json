@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start:dev": "webpack-dev-server --mode development"
+    "start:dev": "webpack-dev-server --mode development",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "calendar-js": "^1.4.4",
+    "express": "^4.16.4",
     "moment": "^2.24.0"
   },
   "devDependencies": {
