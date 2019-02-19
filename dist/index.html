@@ -47,11 +47,13 @@
       <div class="reservation-details-popup__container hidden">
         <div class="reservation-details-popup">
           <form class="reservation-details-popup__form">
+            <p class="alert"></p>
+            <a class="exit-popup"><img class="exit-icon" alt=""/></a>
             <h3 class="reservation-details-popup__time"></h3>
             <div class="reservation-details-popup__form__group">
-              <label for="name">Vardas:</label>
+              <label for="name">Vardas: </label>
               <input
-                class="firstName"
+                class="firstName reservation-details-popup__form__group--item"
                 type="text"
                 placeholder="Vardenis"
                 required
@@ -61,32 +63,32 @@
             <div class="reservation-details-popup__form__group">
               <label for="name">Pavardė:</label>
               <input
-                class="lastName"
+                class="lastName reservation-details-popup__form__group--item"
                 type="text"
-                placeholder="Pavardė"
+                placeholder="Pavardenis"
                 required
               />
             </div>
             <div class="reservation-details-popup__form__group">
               <label for="name">Email:</label>
               <input
-                class="email"
+                class="email reservation-details-popup__form__group--item"
                 type="email"
-                placeholder="El. paštas"
+                placeholder="vardas@pavarde.lt"
                 required
               />
             </div>
             <div class="reservation-details-popup__form__group">
               <label for="name">Telefonas:</label>
               <input
-                class="phone"
+                class="phone reservation-details-popup__form__group--item"
                 type="text"
                 placeholder="861234567"
                 required
               />
             </div>
             <input
-              class="reservation-submit"
+              class="reservation-submit reservation-details-popup__form__group--submitBtn"
               type="submit"
               value="Registruotis"
             />

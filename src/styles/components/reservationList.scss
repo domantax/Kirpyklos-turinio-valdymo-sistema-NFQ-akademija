@@ -6,6 +6,9 @@
 }
 
 .reservation-list {
+  &__container {
+    padding-bottom: 50px;
+  }
   &__buttons {
     display: flex;
     justify-content: center;
@@ -28,4 +31,21 @@
       margin-left: 10px;
     }
   }
+
+  &__item {
+    background: #f6f0ed;
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    &__time {
+      font-size: 30px;
+    }
+  }
+}
+
+.no-reservations {
+  color: #f6f0ed;
+  text-align: center;
+  font-size: 20px;
 }

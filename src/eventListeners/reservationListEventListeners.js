@@ -20,7 +20,6 @@ export default () => {
     );
     datePicker.value = '';
   });
-  console.log(datePicker);
   datePicker.addEventListener('change', () => {
     reservationListContainer.innerHTML = '';
     generateReservationList(datePicker.value);
