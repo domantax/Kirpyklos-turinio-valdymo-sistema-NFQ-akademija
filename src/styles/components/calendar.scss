@@ -1,27 +1,51 @@
 .calendar {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+
+  &__container {
+    width: 80%;
+    background: #f6f0ed;
+    padding: 20px 50px 40px 50px;
+    margin: 0 auto;
+  }
+  &__month {
+    font-size: 50px;
+    text-align: center;
+  }
+  &__next-month-button {
+    padding: 10px;
+    background: rgba(90, 0, 0, 0.3);
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 10px;
+
+    cursor: pointer;
+    &:hover {
+      background: rgba(90, 0, 0, 0.5);
+    }
+  }
 
   &__cell {
     width: (100%/7);
 
     font-size: 30px;
-    @include aspect-ratio(1.2, 1);
+    @include aspect-ratio(1.7, 1);
 
     &--future {
-      background: red;
+      background: rgba(177, 177, 177, 0.2);
       &:hover {
-        background: green;
+        background: rgba(177, 177, 177, 0.7);
       }
     }
     &--today {
-      background: blue;
-      &:hover {
-        background: green;
-      }
+      color: red;
     }
     &--previous {
-      background: gray;
+      background: rgb(150, 150, 150);
+    }
+
+    &--weekend {
+      background: rgba(90, 0, 0, 0.3);
     }
 
     &__content-span {
@@ -34,5 +58,8 @@
 }
 
 .active {
-  background: pink;
+  background: rgb(255, 175, 26);
+  &:hover {
+    background: rgb(255, 175, 26);
+  }
 }

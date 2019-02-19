@@ -15,8 +15,16 @@ const markReservedTimes = (date) => {
       document
         .getElementById(`${moment(reservation.date).format('YYYY-MM-DD')}T${reservation.time}`)
         .classList.remove('reservation-times__container__item--free');
+      document.getElementById(
+        `${moment(reservation.date).format('YYYY-MM-DD')}T${reservation.time}`,
+      ).textContent = `${reservation.time} Užimtas`;
     });
   }
 };
 
-export default markReservedTimes;
+const filterReservations = (filterFactor) => {
+  const filteredData = data.reservations.filter(reservation => reservation.date === filterFactor);
+  return filteredData;
+};
+
+export { markReservedTimes, filterReservations };

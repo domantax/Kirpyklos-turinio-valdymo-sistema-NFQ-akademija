@@ -1,0 +1,15 @@
+.text-container {
+  color: #f6f0ed;
+  text-align: center;
+  padding: 40px 0;
+  &__h2 {
+    font-size: 40px;
+
+    color: #f6f0ed;
+  }
+  &__h4 {
+    margin-top: 15px;
+    font-size: 25px;
+    color: #f6f0ed70;
+  }
+}

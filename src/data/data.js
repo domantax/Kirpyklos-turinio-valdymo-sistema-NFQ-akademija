@@ -5,7 +5,7 @@ export default {
       lastName: 'Mark',
       email: 'clark@mark.com',
       phone: '867698756',
-      date: '2019-02-22',
+      date: '2019-02-20',
       time: '11:00',
     },
     {
@@ -13,7 +13,7 @@ export default {
       lastName: 'Smith',
       email: 'maria@smith.com',
       phone: '8676766756',
-      date: '2019-02-23',
+      date: '2019-02-20',
       time: '14:00',
     },
     {
@@ -21,7 +21,7 @@ export default {
       lastName: 'Blunt',
       email: 'emily@blunt.com',
       phone: '861213336',
-      date: '2019-02-24',
+      date: '2019-02-20',
       time: '13:15',
     },
     {
@@ -29,7 +29,7 @@ export default {
       lastName: 'Zita',
       email: 'rita@zita.com',
       phone: '8676984444',
-      date: '2019-02-24',
+      date: '2019-02-19',
       time: '14:00',
     },
     {
@@ -37,7 +37,7 @@ export default {
       lastName: 'Kytis',
       email: 'rytis@kytis.com',
       phone: '867691231',
-      date: '2019-02-21',
+      date: '2019-02-19',
       time: '11:30',
     },
   ],

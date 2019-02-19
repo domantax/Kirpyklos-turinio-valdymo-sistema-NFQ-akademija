@@ -7,7 +7,6 @@ const calendarFunctionality = () => {
       if (document.querySelector('.active')) {
         document.querySelector('.active').classList.remove('active');
       }
-      console.log(typeof cell.id);
       document.querySelector('.reservation-times__container').innerHTML = '';
       generateReservationTimes(cell.id);
       cell.classList.add('active');

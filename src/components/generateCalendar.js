@@ -1,29 +1,28 @@
 import Calendar from 'calendar-js';
 import moment from 'moment';
 import calendarFunctionality from './calendarFunctionality';
+import calendarOptions from '../options/calendarOptions';
 
 const generateCalendar = (year, month) => {
+  // clear previously generated calendar
   document.querySelector('.calendar').innerHTML = '';
-  const calendarOptions = {
-    months: [
-      'Sausis',
-      'Vasaris',
-      'Kovas',
-      'Balandis',
-      'Gegužė',
-      'Birželis',
-      'Liepa',
-      'Rugpjūtis',
-      'Rugsėjis',
-      'Spalis',
-      'Lapkritis',
-      'Gruodis',
-    ],
-    monthsAbbr: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-  };
   const monthObject = Calendar(calendarOptions).of(year, month);
-  document.querySelector('.month').textContent = monthObject.month;
-  console.log(monthObject);
+  // Show month name
+  document.querySelector('.calendar__month').textContent = monthObject.month;
+
+  monthObject.weekdaysAbbr.forEach((weekday) => {
+    const th = document.createElement('th');
+    const thContentDiv = document.createElement('div');
+    const thSpan = document.createElement('span');
+    thSpan.appendChild(document.createTextNode(weekday));
+    th.classList.add('calendar__cell');
+    thContentDiv.classList.add('calendar__cell__content');
+    thSpan.classList.add('calendar__cell__content-span');
+    thContentDiv.appendChild(thSpan);
+    th.appendChild(thContentDiv);
+    document.querySelector('.calendar').appendChild(th);
+  });
+
   // monthObject.calendar - 2D array of month days [[],[]...]
   for (let i = 0; i < monthObject.calendar.length; i += 1) {
     const tr = document.createElement('tr');
@@ -44,11 +43,16 @@ const generateCalendar = (year, month) => {
         const today = moment().format('YYYY-MM-DD');
         if (moment(id).isSame(today)) {
           td.classList.add('calendar__cell--today');
+          td.classList.add('active');
           td.classList.add('calendar__cell--future');
         } else if (moment(id).isBefore(today)) {
           td.classList.add('calendar__cell--previous');
         } else {
           td.classList.add('calendar__cell--future');
+        }
+        if (j === 0 || j === 6) {
+          td.classList.remove('calendar__cell--future', 'calendar__cell--previous');
+          td.classList.add('calendar__cell--weekend');
         }
       }
       cellContentDiv.appendChild(span);

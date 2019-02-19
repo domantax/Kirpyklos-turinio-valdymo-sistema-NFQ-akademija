@@ -1,0 +1,31 @@
+.hairdressers-page-heading {
+  color: #f6f0ed;
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 0;
+}
+
+.reservation-list {
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    background: #f6f0ed;
+    border: none;
+    border-radius: 5px;
+    &--tomorrow,
+    &--today {
+      padding: 10px;
+      &:hover {
+        background: #f0d5c8;
+      }
+    }
+    &--dateSelector {
+      padding: 5px;
+    }
+    & + & {
+      margin-left: 10px;
+    }
+  }
+}

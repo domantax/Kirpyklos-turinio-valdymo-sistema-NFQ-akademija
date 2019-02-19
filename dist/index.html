@@ -8,43 +8,92 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>hello</h1>
-    <div class="container">
-      <button class="next">Next</button>
-      <h2 class="month"></h2>
-      <table class="calendar"></table>
-      <section class="reservation-times">
-        <h2>Rezervacijų laikai:</h2>
-        <div class="reservation-times__container"></div>
-      </section>
+    <div class="hero">
+      <h1 class="hero__text">Nuostabiausia Kirpykla Mieste</h1>
+      <img alt="scissors photo" class="hero__img" />
     </div>
-    <div class="reservation-details-popup__container hidden">
-      <div class="reservation-details-popup">
-        <form class="reservation-details-popup__form">
-          <h3 class="reservation-details-popup__time"></h3>
-          <div class="reservation-details-popup__form__group">
-            <label for="name">Vardas:</label>
-            <input type="text" placeholder="Vardenis" />
-          </div>
-          <div class="reservation-details-popup__form__group">
-            <label for="name">Pavardė:</label>
-            <input type="text" placeholder="Pavardė" />
-          </div>
-          <div class="reservation-details-popup__form__group">
-            <label for="name">Email:</label>
-            <input type="email" placeholder="El. paštas" />
-          </div>
-          <div class="reservation-details-popup__form__group">
-            <label for="name">Telefonas:</label>
-            <input type="text" placeholder="861234567" />
-          </div>
-          <input
-            class="reservation-submit"
-            type="submit"
-            value="Registruotis"
-          />
-        </form>
+
+    <div class="container">
+      <div class="navButton__container">
+        <a class="navButton navButton--clients">
+          Klientams
+        </a>
+        <a class="navButton navButton--hairdressers">
+          Kirpėjoms
+        </a>
       </div>
+      <div class="clients-page">
+        <div class="text-container">
+          <h2 class="text-container__h2">
+            Pasirinkite laiką vizitui ir UŽSIREGISTRUOKITE!!
+          </h2>
+          <h4 class="text-container__h4">
+            Daugiau jokio laiko gaišimo nereikalingiems skambučiams
+          </h4>
+        </div>
+        <div class="calendar__container">
+          <a class="calendar__next-month-button">Ateinantis mėnuo ></a>
+          <h2 class="calendar__month"></h2>
+          <table class="calendar"></table>
+        </div>
+        <section class="reservation-times">
+          <h2 class="reservation-times__heading">
+            Pasirinkite Jums tinkamą laiką:
+          </h2>
+          <div class="reservation-times__container"></div>
+        </section>
+      </div>
+
+      <div class="reservation-details-popup__container hidden">
+        <div class="reservation-details-popup">
+          <form class="reservation-details-popup__form">
+            <h3 class="reservation-details-popup__time"></h3>
+            <div class="reservation-details-popup__form__group">
+              <label for="name">Vardas:</label>
+              <input
+                class="firstName"
+                type="text"
+                placeholder="Vardenis"
+                required
+                data-ok="name"
+              />
+            </div>
+            <div class="reservation-details-popup__form__group">
+              <label for="name">Pavardė:</label>
+              <input
+                class="lastName"
+                type="text"
+                placeholder="Pavardė"
+                required
+              />
+            </div>
+            <div class="reservation-details-popup__form__group">
+              <label for="name">Email:</label>
+              <input
+                class="email"
+                type="email"
+                placeholder="El. paštas"
+                required
+              />
+            </div>
+            <div class="reservation-details-popup__form__group">
+              <label for="name">Telefonas:</label>
+              <input
+                class="phone"
+                type="text"
+                placeholder="861234567"
+                required
+              />
+            </div>
+            <input
+              class="reservation-submit"
+              type="submit"
+              value="Registruotis"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="hairdressers-page"></div>
     </div>
 
     <script src="main.js"></script>
